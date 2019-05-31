@@ -1,0 +1,20 @@
+[package]
+name = "dbgeng-sys"
+version = "0.1.0"
+description = "FFI bindings for WinDBG/dbgeng."
+authors = ["Naim A. <naim@abda.nl>"]
+edition = "2018"
+build = "build.rs"
+license = "GPLv3"
+
+[profile.release]
+panic = 'abort'
+debug-assertions = false
+debug = false
+overflow-checks = false
+lto = true
+
+[profile.dev]
+panic = 'abort'
+
+[dependencies]
